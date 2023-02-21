@@ -2,11 +2,12 @@ import { withBackgrounds } from "@storybook/addon-ondevice-backgrounds";
 export const decorators = [withBackgrounds];
 export const parameters = {
   backgrounds: {
-    default: "plain",
+    default: "dark",
     values: [
-      { name: "plain", value: "white" },
+      { name: "light", value: "white" },
       { name: "warm", value: "hotpink" },
       { name: "cool", value: "deepskyblue" },
+      { name: "dark", value: "black" },
     ],
   },
   actions: { argTypesRegex: "^on[A-Z].*" },

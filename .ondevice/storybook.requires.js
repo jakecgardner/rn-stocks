@@ -38,7 +38,15 @@ try {
 } catch {}
 
 const getStories = () => {
-  return [require("../components/Button/Button.stories.tsx")];
+  return [
+    require("../components/HomeScreen/HomeScreen.stories.tsx"),
+    require("../components/News/News.stories.tsx"),
+    require("../components/SearchBar/SearchBar.stories.tsx"),
+    require("../components/SearchResults/SearchResults.stories.tsx"),
+    require("../components/StockDetail/StockDetail.stories.tsx"),
+    require("../components/Title/Title.stories.tsx"),
+    require("../components/Watchlist/Watchlist.stories.tsx"),
+  ];
 };
 
 configure(getStories, module, false);

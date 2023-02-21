@@ -12,6 +12,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2369427F29A1F2C700CFFAD5 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2369427E29A1F2C700CFFAD5 /* LineChartView.swift */; };
+		2369428129A1F43000CFFAD5 /* LineChartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2369428029A1F43000CFFAD5 /* LineChartManager.swift */; };
+		2369428529A1FAB900CFFAD5 /* LineChartBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2369428429A1FAB900CFFAD5 /* LineChartBridge.m */; };
 		7699B88040F8A987B510C191 /* libPods-RNStocks-RNStocksTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-RNStocks-RNStocksTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -37,6 +40,10 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNStocks/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNStocks/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-RNStocks-RNStocksTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNStocks-RNStocksTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2369427D29A1F2C600CFFAD5 /* RNStocks-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNStocks-Bridging-Header.h"; sourceTree = "<group>"; };
+		2369427E29A1F2C700CFFAD5 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		2369428029A1F43000CFFAD5 /* LineChartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartManager.swift; sourceTree = "<group>"; };
+		2369428429A1FAB900CFFAD5 /* LineChartBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineChartBridge.m; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-RNStocks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNStocks.debug.xcconfig"; path = "Target Support Files/Pods-RNStocks/Pods-RNStocks.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-RNStocks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNStocks.release.xcconfig"; path = "Target Support Files/Pods-RNStocks/Pods-RNStocks.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-RNStocks-RNStocksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNStocks-RNStocksTests.debug.xcconfig"; path = "Target Support Files/Pods-RNStocks-RNStocksTests/Pods-RNStocks-RNStocksTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +93,7 @@
 		13B07FAE1A68108700A75B9A /* RNStocks */ = {
 			isa = PBXGroup;
 			children = (
+				2369427C29A1F28B00CFFAD5 /* Views */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -94,6 +102,17 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = RNStocks;
+			sourceTree = "<group>";
+		};
+		2369427C29A1F28B00CFFAD5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2369427E29A1F2C700CFFAD5 /* LineChartView.swift */,
+				2369427D29A1F2C600CFFAD5 /* RNStocks-Bridging-Header.h */,
+				2369428029A1F43000CFFAD5 /* LineChartManager.swift */,
+				2369428429A1FAB900CFFAD5 /* LineChartBridge.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -207,7 +226,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1410;
 					};
 				};
 			};
@@ -412,7 +431,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2369428529A1FAB900CFFAD5 /* LineChartBridge.m in Sources */,
+				2369428129A1F43000CFFAD5 /* LineChartManager.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				2369427F29A1F2C700CFFAD5 /* LineChartView.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +454,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-RNStocks-RNStocksTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -459,6 +482,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-RNStocks-RNStocksTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = RNStocksTests/Info.plist;
@@ -498,7 +522,9 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.jakecgardner.RNStocks;
 				PRODUCT_NAME = RNStocks;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNStocks-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,7 +549,9 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.jakecgardner.RNStocks;
 				PRODUCT_NAME = RNStocks;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNStocks-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
